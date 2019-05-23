@@ -4,7 +4,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      List
+      Asignaturas
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,11 +12,10 @@
 <ion-content>
   <ion-list>
     <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
+      <ion-item href="notes/{{item.title}}">
+        <ion-icon [name]="item.icon" slot="start"></ion-icon>
+          {{item.title}}
+      </ion-item>
     </ion-item>
   </ion-list>
   <!--
